@@ -1,0 +1,4 @@
+<div *ngIf="transactions$ | async as transactions" class="container">
+  <app-summary [transactions]="transactions"></app-summary>
+  <app-transaction-table [transactions]="transactions"></app-transaction-table>
+</div>

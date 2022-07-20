@@ -1,0 +1,26 @@
+<div class="container">
+  <table *ngIf="transactions.length > 0; else emptyState">
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Valor</th>
+        <th>Categoria</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{transaction.title}}</td>
+        <td [class]="transaction.type">{{transaction.amount | currency:'BRL'}}</td>
+        <td>{{transaction.category}}</td>
+        <td>{{transaction.createdAt | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #emptyState>
+    <div class="emptyState">
+      <h2>Nenhuma transação cadastrada</h2>
+    </div>
+  </ng-template>
+</div>

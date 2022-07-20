@@ -1,0 +1,17 @@
+<div *ngIf="showModal" class="overlay">
+  <div class="modal">
+    <button type="button" class="close" (click)="handleHideModal()">
+      <img src="assets/close.svg" alt="Fechar Modal">
+    </button>
+    <form [formGroup]="form">
+    <div class="container">
+      <h2>Cadastrar transação</h2>
+        <input formControlName="title" type="text" placeholder="Titulo">
+        <input formControlName="amount" type="number" placeholder="Valor">
+        <input formControlName="category" type="text" placeholder="Categoria">
+        <app-transaction-type (selectedType)="onSelectType($event)"></app-transaction-type>
+      </div>
+      <button (click)="handleSubmit()" type="submit">Cadastrar</button>
+    </form>
+  </div>
+</div>

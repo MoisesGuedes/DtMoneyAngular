@@ -1,0 +1,20 @@
+{
+  "transactions": [
+    {
+      "id": 1655078189703,
+      "title": "Salario",
+      "amount": 15000,
+      "category": "Salario",
+      "type": "deposit",
+      "createdAt": "1655078189703"
+    },
+    {
+      "id": 1655078317476,
+      "title": "Carro",
+      "amount": 50000,
+      "category": "Locomoção",
+      "type": "withdraw",
+      "createdAt": "1655078317476"
+    }
+  ]
+}

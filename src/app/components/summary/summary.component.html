@@ -1,0 +1,30 @@
+<div class="container">
+  <div>
+    <header>
+      <p>Entradas</p>
+      <img src="assets/income.svg" alt="Entradas">
+    </header>
+    <strong>
+      {{summary.deposits | currency:'BRL'}}
+    </strong>
+  </div>
+  <div>
+    <header>
+      <p>Saídas</p>
+      <img src="assets/outcome.svg" alt="Entradas">
+    </header>
+    <strong>
+      -{{" "}}
+      {{summary.withdraws | currency:'BRL'}}
+    </strong>
+  </div>
+  <div class="highlight-background" [class.danger-background]="summary.total < 0">
+    <header>
+      <p>Total</p>
+      <img src="assets/total.svg" alt="Entradas">
+    </header>
+    <strong>
+      {{summary.total | currency:'BRL'}}
+    </strong>
+  </div>
+</div>
